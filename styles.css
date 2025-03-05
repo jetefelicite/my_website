@@ -1,0 +1,349 @@
+/* Import Custom Fonts */
+@font-face {
+    font-family: 'Discota Blur';
+    src: url('fonts/DiscotaBlurRegularDemo-j977j.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ppneuemontreal-thin';
+    src: url('fonts/ppneuemontreal-thin.otf') format('opentype');
+}
+
+/* Reset and Base Styles */
+body {
+    font-family: 'Ppneuemontreal-thin', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to top */
+}
+
+/* Background Video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Title */
+.main-title {
+    font-family: 'Discota Blur', sans-serif;
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 80px auto 0; /* Centered and slightly lowered */
+    text-align: center;
+    max-width: 90vw;
+    text-overflow: ellipsis;
+}
+
+/* Sections Container */
+.sections-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between sections */
+    margin-top: 30px; /* Just below the main title */
+}
+
+/* Individual Sections */
+.section {
+    font-family: 'Ppneuemontreal-thin', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 200px;
+}
+
+/* Footer (Copyright) */
+footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+/* Portfolio Page Styles */
+.portfolio-page {
+    background-color: black;
+    color: white;
+    font-family: 'Ppneuemontreal-thin', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Portfolio Page Title */
+.portfolio-title {
+    font-family: 'Discota Blur', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Programming Section */
+.portfolio-section {
+    text-align: left;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Disco Ball Subtitle */
+.disco-ball-title {
+    font-family: 'Discota Blur', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Project Thumbnail */
+.project-thumbnail {
+    width: 150px; /* Adjust size */
+    cursor: pointer;
+    margin-right: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 80%;
+}
+
+#demo-video {
+    width: 100%;
+    height: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Customized VJ Mixer Title */
+.vj-mixer-title {
+    font-family: 'Discota Blur', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 60px; /* Increased space */
+    margin-bottom: 10px;
+}
+/* Customized VJ Mixer Description */
+.vj-mixer-description {
+    font-family: 'Ppneuemontreal-thin', sans-serif;
+    font-size: 1rem;
+    color: white;
+    max-width: 700px;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Project Links (GitHub & Google Drive) */
+.project-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px; /* Spacing between buttons */
+}
+
+/* GitHub & Google Drive Buttons */
+.project-button {
+    font-family: 'Ppneuemontreal-thin', sans-serif;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: gray;
+    color: white;
+}
+/* Add margin between Disco Ball and Customized VJ Mixer */
+.disco-ball-title {
+    margin-bottom: 40px; /* Adds more space between sections */
+}
+
+/* Lightbox styles for image enlargement */
+#image-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+#image-lightbox .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* Add more space between Disco Ball Thumbnail and the Customized VJ Mixer Title */
+.programming-content {
+    margin-bottom: 60px; /* Adds more space below the Disco Ball thumbnail */
+}
+.inline-link {
+    color: #007bff; /* Change to a color that fits your design */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.inline-link:hover {
+    color: #0056b3; /* Darker shade when hovered */
+}
+/* Apply Discota Blur Font to Visual Jams Title */
+.visual-jams-title {
+    font-family: 'Discota Blur', sans-serif;
+    font-size: 2em; /* Adjust to match other section titles */
+    margin-top: 40px;
+    text-align: left;
+    color: #fff; /* Adjust color if needed */
+}
+
+/* Optional: Adjust Description Text */
+.visual-jams-description {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #ccc; /* Adjust if necessary */
+    max-width: 800px;
+}
+.visual-jams-page {
+    padding: 20px;
+    background-color: #3e1a64; /* Dark purple background */
+}
+
+.visual-jams-videos {
+    display: flex;
+    flex-direction: column; /* Stack the videos vertically */
+    align-items: center; /* Center the videos horizontally */
+    gap: 30px; /* Add space between each video section */
+}
+
+.video-item {
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    gap: 10px; /* Space between video and description */
+}
+
+/* First Video - Move it more to the left */
+.first-video .video-container video {
+    max-width: 480px;
+    max-height: 270px;
+    transform: translateX(-230px); /* Move it more left */
+}
+
+.first-video .video-description {
+    font-size: 1rem;
+    color: #fff;
+    text-align: left;
+    max-width: 500px;
+}
+
+/* Second Video - Move it more to the right */
+.second-video {
+    display: flex;
+    flex-direction: row-reverse; /* Put description to the left of video */
+    gap: 10px; /* Space between description and video */
+}
+
+.second-video .video-container video {
+    max-width: 480px;
+    max-height: 270px;
+    transform: translateX(430px); /* Move it more right */
+}
+
+.second-video .video-description {
+    font-size: 1rem;
+    color: #fff;
+    text-align: left;
+    max-width: 500px;
+}
+
+/* Video description styles */
+.video-description h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.video-description p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Styling for the video containers */
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ensure first video stays to the left and second video stays below */
+.first-video {
+    align-items: center;
+}
+
+.second-video {
+    flex-direction: row-reverse;
+}
