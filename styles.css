@@ -277,8 +277,8 @@ footer {
 .visual-jams-videos {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* Adjust spacing between video sections */
-    align-items: center; /* Center videos and text */
+    gap: 40px;
+    align-items: center;
     max-width: 900px;
     margin: auto;
 }
@@ -292,19 +292,31 @@ footer {
 }
 
 .video-container video {
-    width: 100%;
-    max-width: 400px; /* Adjust based on preference */
+    width: 400px; /* Fixed width */
+    height: 225px; /* Fixed height to maintain aspect ratio */
 }
 
 .first-video {
-    flex-direction: row; /* Text on right, video on left */
+    flex-direction: row;
 }
 
 .second-video {
-    flex-direction: row-reverse; /* Text on left, video on right */
+    flex-direction: row-reverse;
 }
 
-.video-description {
-    max-width: 400px;
-    padding: 20px;
+.third-video {
+    flex-direction: row;
+   
 }
+
+.fourth-video {
+    flex-direction: row;
+   
+}
+
+.fifth-video {
+    flex-direction: row;
+   
+}
+
+
