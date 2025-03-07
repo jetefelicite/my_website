@@ -1,7 +1,7 @@
 /* Import Custom Fonts */
 @font-face {
     font-family: 'Discota Blur';
-    src: url('fonts/DiscotablurRegularDemo-j977j.otf') format('opentype');
+    src: url('fonts/DiscotaBlurRegularDemo-j977j.otf') format('opentype');
 }
 
 @font-face {
@@ -276,74 +276,35 @@ footer {
 
 .visual-jams-videos {
     display: flex;
-    flex-direction: column; /* Stack the videos vertically */
-    align-items: center; /* Center the videos horizontally */
-    gap: 30px; /* Add space between each video section */
+    flex-direction: column;
+    gap: 40px; /* Adjust spacing between video sections */
+    align-items: center; /* Center videos and text */
+    max-width: 900px;
+    margin: auto;
 }
 
 .video-item {
     display: flex;
-    align-items: center; /* Center the content vertically */
-    gap: 10px; /* Space between video and description */
-}
-
-/* First Video - Move it more to the left */
-.first-video .video-container video {
-    max-width: 480px;
-    max-height: 270px;
-    transform: translateX(-230px); /* Move it more left */
-}
-
-.first-video .video-description {
-    font-size: 1rem;
-    color: #fff;
-    text-align: left;
-    max-width: 500px;
-}
-
-/* Second Video - Move it more to the right */
-.second-video {
-    display: flex;
-    flex-direction: row-reverse; /* Put description to the left of video */
-    gap: 10px; /* Space between description and video */
-}
-
-.second-video .video-container video {
-    max-width: 480px;
-    max-height: 270px;
-    transform: translateX(430px); /* Move it more right */
-}
-
-.second-video .video-description {
-    font-size: 1rem;
-    color: #fff;
-    text-align: left;
-    max-width: 500px;
-}
-
-/* Video description styles */
-.video-description h3 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.video-description p {
-    font-size: 1rem;
-    color: #ccc;
-}
-
-/* Styling for the video containers */
-.video-container {
-    display: flex;
-    justify-content: center;
-}
-
-/* Ensure first video stays to the left and second video stays below */
-.first-video {
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 400px; /* Adjust based on preference */
+}
+
+.first-video {
+    flex-direction: row; /* Text on right, video on left */
 }
 
 .second-video {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Text on left, video on right */
+}
+
+.video-description {
+    max-width: 400px;
+    padding: 20px;
 }
