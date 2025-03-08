@@ -1,8 +1,9 @@
 /* Import Custom Fonts */
 @font-face {
-    font-family: 'Discota Blur';
-    src: url('fonts/DiscotaBlurRegularDemo-j977j.otf') format('opentype');
+    font-family: 'DiscotaBlur';
+    src: url('./fonts/DiscotaBlurRegularDemo-j977j.otf') format('opentype');
 }
+
 
 @font-face {
     font-family: 'Ppneuemontreal-thin';
