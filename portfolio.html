@@ -3,174 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore my work in programming, animation, and visual performance.">
-    <title>Portfolio</title>
+    <title>AV Performance – Félicité Couëlle-Brunet</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="portfolio-page">
+<body class="av-page">
 
-    <!-- Portfolio Title -->
-    <h1 class="portfolio-title">Portfolio</h1>
+    <h1 class="portfolio-title">AV Performance</h1>
 
-    <!-- Programming Section -->
-    <section class="portfolio-section">
-        <h2 class="section-title">Programming</h2>
-        
-        <!-- Disco Ball Subtitle -->
-        <h3 class="disco-ball-title">Disco Ball</h3>
-        
-        <p>Explore my 3D Sphere made with Python in TouchDesigner. This project is an exploration of color, light, and movement using SOPs and TOPs. Instead of aiming for realism, I focused on abstraction—using the disco ball as a canvas for vibrant, shifting colors.
+    <div class="av-container">
 
-            I played with reflections, textures, and distortions to create a dynamic, ever-changing surface. The biggest challenge was balancing fluid motion with bold color transformations.
+        <!-- LEFT: titles -->
+        <ul class="av-list">
+            <li class="av-item active" data-target="piece-1">La Correspondance d'un Soleil amoureux (2025)</li>
+            <li class="av-item" data-target="piece-2">E/Sense Jams (2024, ongoing)</li>
+            <li class="av-item" data-target="piece-3">Improvisation Series</li>
+        </ul>
+
+        <!-- RIGHT: content -->
+        <div class="av-content">
+
+            <p>
+                    Between performance and installation, Loïc Minty and I created an audiovisual organism that responded to its environment. Built from scratch, the system fed on ambient sound, sporadically activating pottery recordings and projections of plant celluloid and ceramic-print animations gathered during the residency. This generative ecosystem was then performed live using Carmen Abdallah’s instruments, staging a dialogue between the unpredictability of the natural world and the human capacity to adapt.
+
+Piezo microphones dispersed through the space functioned like a nervous system, sending signals to a TouchDesigner and MaxMSP interface that reacted to movement and low-frequency ground vibrations. The installation opened the performance frame, inviting the surrounding environment—and the public—into active participation.
+
+Developed for the Jardin de Silice, the work sought to foster a sense of communion between visitors and the site’s history through sound and image. Drawing on narrativity as a tool for immersion, we expanded the location’s sense of fantasy by researching and gathering stories connected to the space.
+                </p>
             
-            I want viewers to feel immersed in a hypnotic play of light, as if stepping into a digital prism. This project pushed my understanding of real-time 3D manipulation, and I see it evolving into more interactive, audio-reactive visuals. Download the project to see the script, the demo video, and the .toe file.</p>
-        
-        <!-- Thumbnail and Download Button for Disco Ball -->
-        <div class="programming-content">
-            <!-- Thumbnail Image for Disco Ball -->
-            <img class="project-thumbnail" src="images/sphere.png" alt="TouchDesigner Mixer" onclick="openVideo()">
-            
-            <!-- Download Link -->
-            <a class="download-button" href="https://github.com/jetefelicite/Touchdesigner-sphere" target="_blank">Download Project</a>
-        </div>
-
-        <!-- Customized VJ Mixer Subtitle -->
-        <h3 class="disco-ball-title">Customized VJ Mixer</h3>
-
-        <!-- Explanation for Customized VJ Mixer -->
-        <p class="vj-mixer-description">
-            This was made with TouchDesigner, GLSL, Python, and NDI Output. 
-            This custom video mixer transforms live visuals into an audio-reactive, real-time performance tool. 
-            Originally <a href="https://github.com/Richard-Burns/SimpleMixer" target="_blank" class="inline-link">a downloadable GitHub project</a>, 
-            I restructured and customized it to seamlessly integrate my own assets, 
-            making them dynamically responsive to music. All of the TouchDesigner-based assets are mine, and the GLSL shaders were downloaded from Shadertoy. <br><br>
-            
-            Designed for Visual Jamming & Live VJing, it features: <br>
-            - <strong>NDI Output</strong> for professional streaming setups. <br>
-            - <strong>GLSL Shaders Customization</strong> to enhance motion effects. <br>
-            - <strong>Organized and Audio Reactivity System</strong> for structured yet experimental performances. <br><br>
-            
-            This mixer allows me to improvise visuals during performances while keeping elements finely controlled. 
-            It bridges my animation practice with live media arts, making real-time creation intuitive and expressive.
-        </p>
-        
-
-        <!-- Thumbnail Image for Customized VJ Mixer -->
-        <div class="programming-content">
-            <img class="project-thumbnail" src="images/mixer_shot.png" alt="Customized VJ Mixer" onclick="openImage()">
-        </div>
-
-        <!-- Links to GitHub & Google Drive -->
-        <div class="project-links">
-            <a href="https://github.com/jetefelicite/VJ-mixer" class="project-button" target="_blank">🔗 View Code on GitHub</a>
-            <a href="https://drive.google.com/file/d/1IZFNW9_LoYhfV4_w-USia7tNcZZi2fd7/view?usp=sharing" class="project-button" target="_blank">🔗 Full Project on Google Drive</a>
-        </div>
-    </section>
-
-    <!-- Video Lightbox -->
-    <div id="video-lightbox" class="lightbox" onclick="closeVideo(event)">
-        <div class="lightbox-content">
-            <video id="demo-video" controls>
-                <source src="videos/sphere_video.mov" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <button class="close-btn" onclick="closeVideo(event)">Close</button>
-        </div>
-    </div>
-
-    <!-- Image Lightbox (for enlarging thumbnails) -->
-    <div id="image-lightbox" class="lightbox" onclick="closeImage(event)">
-        <div class="lightbox-content">
-            <img id="lightbox-image" src="" alt="Image Lightbox">
-            <button class="close-btn" onclick="closeImage(event)">Close</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-
-    <!-- Visual Jams Section -->
-<section class="portfolio-section">
-    <h2 class="section-title visual-jams-title">Visual Jams</h2>
-
-    <p class="visual-jams-description">
-        Working with my peers is one of the things that makes me feel the most alive. As a Fine Arts student, 
-        I've been observing the lack of spontaneity in collaboration, especially in digital art. This is why 
-        this initiative of creating in real-time with others was the best decision I could take as an artist and 
-        human being. The essence of jamming is extremely important in my practice because it builds my character 
-        and it gives life to what I intend to create. I've been collaborating with musicians with electronic and 
-        jazz backgrounds. I've also experienced movement in real-time with contemporary dancers. We had a project 
-        last year called <a href="https://www.instagram.com/vibetribecollectivemtl/" target="_blank" 
-        class="inline-link">Vibe Tribe collective</a>. I am now building this idea of sustaining the visual jams 
-        in a more consistent way. In the documentation I provide, it is possible to see the different ways I 
-        connect devices to each other.
-    </p>
-    
-
-  <!-- Link to Visual Jams Documentation Page -->
-<div class="visual-jams-link">
-    <a href="visual-jams.html" class="button-link">📹 View Visual Jams Documentation</a>
+            <div class="image-row">
+    <img src="images/1001Pots_1.png" alt="Performance still 1">
+    <img src="images/structure.jfif" alt="Performance still 2">
 </div>
 
-</section>
+<div class="video-wrapper">
+    <iframe 
+        src="https://player.vimeo.com/video/1163414291"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</div>
 
-    <!-- Media Theory Section -->
-    <section class="portfolio-section">
-        <h2 class="section-title">Media Theory</h2>
-        
-        <p>
-            This section explores my critical reflections on the intersection of media, art, and technology. 
-            I engage with theoretical concepts that inform my artistic practice, reflecting on how digital tools, 
-            analog processes, and live performance interact in contemporary visual culture. 
-        </p>
-
-        <p>
-            I aim to contribute to the broader conversation about visual storytelling, pushing the boundaries of 
-            how we perceive and interact with moving images in performance and installation contexts.
-        </p>
-        
-    
-    <!-- Subtitle in Discota Blur -->
-    <h3 class="disco-ball-title">Hybrid Animation Synthesis: Redefining Real-Time Performance through Embodied Interaction</h3>
-    
-    <p>
-        This project aims to create an affordable and flexible instrument that allows artists to jam with
-        hand-made animations in real time, combining analog and digital processes to enhance visual
-        performance. While digital tools and AI-generated imagery dominate modern workflows,
-        hand-made animation remains a vital form of artistic expression. It fosters embodied cognition,
-        creativity, intuition, and spontaneity, offering a unique visual language that automated tools
-        often cant replicate. Most current video synthesis tools are either prohibitively expensive or
-        restrictive, focusing on pre-set effects instead of offering real artistic control. This project seeks
-        to address these limitations by developing a tool that enables artists to shape their animations
-        dynamically. By blending analog effects with digital control, the instrument provides a more
-        intuitive, flexible approach to animation. It also introduces the concept of visual
-        jams—interactive performances where multiple artists collaborate to create and shape
-        animations in real time. The project also seeks to address the gender imbalance in video
-        synthesis, which has been historically shaped by male pioneers like Nam June Paik. By
-        focusing on creative freedom and inclusivity, it aims to open the field to a broader range of
-        artists, especially those who have been historically underrepresented. Inspired by the work of
-        Guillaume Vallée, who emphasizes materiality and process, the project rejects the idea that
-        analog techniques are merely nostalgic. Vallée’s work embraces imperfections and the
-        physicality of materials as essential to creative expression. Similarly, this synthesizer allows
-        artists to experiment with their animations, blending them with analog effects in real time,
-        offering new possibilities for creative exploration. In the end, the instrument aims to democratize
-        the creative process, inviting anyone—regardless of technical background—to engage with and
-        shape evolving visual narratives. This will transform animation into a dynamic, participatory
-        practice.
-    </p>
-
-    <p>
-        As a student-researcher, my role in this project is to design an develop a hybrid visual synthesizer that allows for real-time interaction hand-made animations. I will be responsible for both the conceptual and technical aspects, including building the necessary hardware and software components, testing different analog and digital processes, and ensuring the system is intuitive and accessible for artists. Additionally, I will document creative and technical development, analyze how embodied interaction influences animation, and explore how this tool can contribute to the field of visual performance. Through live visual jam sessions and experimentation, I aim to refine the synthesizer's functionality and artistic potential.
-    </p>
-    <a href="https://github.com/jetefelicite/my_website/raw/main/documents/analogsynth.pdf
-    " target="_blank">Click to view project proposal</a>
-
-</section>
-
-    </section>
+<div class="stacked-images">
+    <img src="images/1001Pots_4.jpg" alt="Extra image 1">
+    <img src="images/1001Pots_5.jpg" alt="Extra image 2">
+    <img src="images/Soundscores.jpg" alt="Extra image 3">
+    <img src="images/Soundscores2.jfif" alt="Extra image 4">
+</div>
 
 
 
+            <div class="av-piece" id="piece-2">
+                <img src="images/visualjam_sat.jpg" alt="Visual Jam at SAT">
+                <p>
+                    Live collaboration with musicians and performers at SAT.
+                </p>
+            </div>
+
+            <div class="av-piece" id="piece-3">
+                <iframe 
+                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+                <p>
+                    Improvised AV sets exploring rhythm, gesture, and abstraction.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="av.js"></script>
 </body>
 </html>
+
+
 
 
