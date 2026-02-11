@@ -38,3 +38,20 @@ function closeImage(event) {
         document.getElementById("image-lightbox").style.display = "none";
     }
 }
+
+const items = document.querySelectorAll('.av-item');
+const pieces = document.querySelectorAll('.av-piece');
+
+items.forEach(item => {
+    item.addEventListener('click', () => {
+        // reset
+        items.forEach(i => i.classList.remove('active'));
+        pieces.forEach(p => p.classList.remove('active'));
+
+        // activate selected
+        item.classList.add('active');
+        document.getElementById(item.dataset.target).classList.add('active');
+    });
+});
+
+
